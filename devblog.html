@@ -584,7 +584,7 @@
             function cleanSlugFromPath(pagePath) {
                 if (pagePath.includes("/r/rec")) {
                     pagePath = pagePath.substring(0, pagePath.indexOf("/r/rec"));
-                    pagePath = pagePath.substring(0, pagePath.lastIndexOf("/"));
+                    pagePath = pagePath.substring(0, pagePath.lastIndexOf("index.html"));
                 }
 
                 return pagePath + (pagePath.endsWith('/') ? '' : '/');
@@ -1040,21 +1040,20 @@
     <nav id="home_header3" data-block-version="2.2.7" data-block-id="6bd9f96e-8e4c-4f15-b5df-e30659237ac5" data-block-updated="Tue Sep 06 2022 00:21:43 GMT+0400 (Armenia Standard Time)" class=" navbar nav navbar-expand-lg navbar-light header1-6bd9f96e-8e4c-4f15-b5df-e30659237ac5 sw-background-color-ffffff sw-padding-top-5xs sw-padding-bottom-5xs sw-border-top-style-none sw-border-top-width-none sw-border-top-color-2e4460 sw-border-bottom-style-none sw-border-bottom-width-none sw-border-bottom-color-2e4460" style="opacity: 1; visibility: visible;">
         <div class="container"> 
             <!-- Logo -->
-            <a class="navbar-brand" href="/">
+            <a class="navbar-brand" href="index.html">
                 <img class="sw-width-11xs " src="CubeNotesLogo.png" alt="" style="width: 200%;">
             </a>
             <div class="desktop-menu text-center justify-content-end">
                 <ul class="navbar-nav align-items-center flex-row one-button">
                     <li class="nav-item ">
-                        <a target="" class="position-relative  sw-font-size-m sw-text-color-eda100 sw-font-family-default sw-font-weight-semibold sw-letter-spacing-normal sw-display-block sw-padding-top-6xs sw-padding-bottom-6xs sw-padding-left-6xs sw-padding-right-xs hover:sw-text-decoration-no-underline active:sw-background-color-transparent" href="#feature1">     Learn More     </a>
+                        <a target="" class="position-relative  sw-font-size-m sw-text-color-eda100 sw-font-family-default sw-font-weight-semibold sw-letter-spacing-normal sw-display-block sw-padding-top-6xs sw-padding-bottom-6xs sw-padding-left-6xs sw-padding-right-xs hover:sw-text-decoration-no-underline active:sw-background-color-transparent" href="index.html#feature1">     Learn More     </a>
                         <div class="border-0 dropdown-menu links-dropdown" aria-labelledby="navbarDropdown-0" style="background-color: rgb(255, 255, 255);"></div>
                     </li>
                     <li class="nav-item ">
-                        <!-- change the href in the next line -->
                         <a target="" class="position-relative  sw-font-size-m sw-text-color-eda100 sw-font-family-default sw-font-weight-semibold sw-letter-spacing-normal sw-display-block sw-padding-top-6xs sw-padding-bottom-6xs sw-padding-left-6xs sw-padding-right-xs hover:sw-text-decoration-no-underline active:sw-background-color-transparent" href="devblog.html">     Development Blog     </a>
                         <div class="border-0 dropdown-menu links-dropdown" aria-labelledby="navbarDropdown-0" style="background-color: rgb(255, 255, 255);"></div>
                     </li>
-                    <!-- ADD TOP BANNER ITEMS HERE -->
+                    <!-- 1. ADD TOP BANNER ITEMS HERE AND AT NO. 2 -->
                 </ul>
             </div>
             <!-- mobile toggle -->
@@ -1063,7 +1062,7 @@
             </div>
             <div class="mob-menu-content" style="background-color: rgb(255, 255, 255);">
                 <div class="mob-menu-header">
-                    <a class="navbar-brand" href="/">
+                    <a class="navbar-brand" href="index.html">
                         <img class="sw-width-11xs " src="https://softr-prod.imgix.net/applications/8b8577c9-0a43-4f84-8d97-e9e6db87f72a/assets/9a150a0b-9ec6-4306-a327-e35d2bd5e09b.png" alt="">
                     </a>
                     <span class="navbar-close">
@@ -1080,11 +1079,12 @@
                                 <div class="simplebar-content-wrapper" tabindex="0" role="region" aria-label="scrollable content" style="height: auto; overflow: hidden;">
                                     <div class="simplebar-content" style="padding: 0px;">
                                         <div class="navigation-section">
-                                            <a target="" class="link collapsed d-block sw-font-size-s sw-text-color-261f1f sw-font-family-default sw-font-weight-semibold sw-letter-spacing-normal sw-display-block sw-padding-top-6xs sw-padding-bottom-6xs sw-padding-left-6xs sw-padding-right-xs hover:sw-text-decoration-no-underline active:sw-background-color-transparent" href="#feature1" style="background-color: rgb(255, 255, 255);">    Learn More     </a>
+                                            <a target="" class="link collapsed d-block sw-font-size-s sw-text-color-261f1f sw-font-family-default sw-font-weight-semibold sw-letter-spacing-normal sw-display-block sw-padding-top-6xs sw-padding-bottom-6xs sw-padding-left-6xs sw-padding-right-xs hover:sw-text-decoration-no-underline active:sw-background-color-transparent" href="#index.htmlfeature1" style="background-color: rgb(255, 255, 255);">    Learn More     </a>
                                         </div>
-                                        <div class="buttons-section">
-                                            <a data-element="button" target="" class="sw-font-size-xs sw-text-color-eda100 sw-font-family-default sw-font-weight-semibold sw-border-radius-default sw-background-color-ffffff sw-padding-left-4xs sw-padding-right-4xs sw-padding-top-6xs sw-padding-bottom-6xs sw-border-style-solid sw-border-width-s sw-border-color-eda100 sw-letter-spacing-normal sw-text-decoration-no-underline hover:sw-text-decoration-no-underline hover:sw-box-shadow-m sw-display-block m:sw-margin-left-6xs" href="/sign-up">LOG IN / APPLY</a>
+                                        <div class="navigation-section">
+                                            <a target="" class="link collapsed d-block sw-font-size-s sw-text-color-261f1f sw-font-family-default sw-font-weight-semibold sw-letter-spacing-normal sw-display-block sw-padding-top-6xs sw-padding-bottom-6xs sw-padding-left-6xs sw-padding-right-xs hover:sw-text-decoration-no-underline active:sw-background-color-transparent" href="devblog.html" style="background-color: rgb(255, 255, 255);">    Development Blog     </a>
                                         </div>
+                                        <!-- 2. ALSO ADD TOP BANNER ITEMS HERE -->
                                     </div>
                                 </div>
                             </div>
@@ -1106,120 +1106,38 @@
             <div class="row align-items-center">
                 <div class="col-lg-5 pb-5 pb-lg-0 text-center text-lg-left">
                     <h1 class="sw-font-size-7xl sw-text-color-ffffff sw-font-family-pacifico sw-font-weight-medium sw-padding-top-none sw-padding-bottom-s sw-letter-spacing-normal sw-line-height-compact ">      Development Blog </h1>
-                    <p class="sw-font-size-l sw-text-color-ffffff sw-font-family-default sw-font-weight-default sw-padding-top-none sw-padding-bottom-7xs sw-letter-spacing-normal sw-line-height-loose ">      Scroll down for our latest development updates. </p>
+                    <p class="sw-font-size-l sw-text-color-ffffff sw-font-family-default sw-font-weight-default sw-padding-top-none sw-padding-bottom-7xs sw-letter-spacing-normal sw-line-height-loose ">      Our latest development updates. </p>
                     <div class="d-flex justify-content-center justify-content-lg-start flex-wrap">
                         <a data-element="button" target="" class="sw-font-size-xs sw-text-color-default sw-font-family-default sw-font-weight-semibold sw-border-radius-l sw-background-color-default sw-padding-left-4xs sw-padding-right-4xs sw-padding-top-5xs sw-padding-bottom-5xs sw-border-style-solid sw-border-width-s sw-border-color-ffffff sw-letter-spacing-wider sw-text-decoration-no-underline hover:sw-text-decoration-no-underline hover:sw-box-shadow-m sw-margin-bottom-6xs sw-margin-right-5xs sw-display-inline-block" href="#feature1">        Explore Features       </a>
                     </div>
                 </div>
                 <div class="col-lg-7 text-center">
-                    <img src="https://softr-prod.imgix.net/applications/8b8577c9-0a43-4f84-8d97-e9e6db87f72a/assets/eaedd810-f5c5-49ea-b0db-72152926ad65.png" class="sw-percentage-width-full sw-border-style-solid sw-border-width-none sw-border-color-2e4460 sw-border-radius-none  mx-auto d-block" alt="Image alt">
+                    <img src="devimage.png" class="sw-percentage-width-full sw-border-style-solid sw-border-width-none sw-border-color-2e4460 sw-border-radius-none  mx-auto d-block" alt="Image alt">
                 </div>
             </div>
         </div>
     </header>
     <section id="feature1" data-block-version="2.0.1" data-block-id="e6406a63-9b0f-426d-b05c-2439692dcb64" data-block-updated="Tue Sep 06 2022 00:21:55 GMT+0400 (Armenia Standard Time)" style="" class="feature4-e6406a63-9b0f-426d-b05c-2439692dcb64 sw-background-color-ffffff sw-padding-top-2xl sw-padding-bottom-2xl sw-border-top-style-none sw-border-top-width-xs sw-border-top-color-2e4460 sw-border-bottom-style-none sw-border-bottom-width-xs sw-border-bottom-color-2e4460  sw-background-repeat-no-repeat sw-background-size-cover sw-background-position-center sw-background-attachment-scroll ">
+        <!-- Begin Sprint Entries -->
         <div class="container">
             <div class="col-12 text-center">
-                <h2 class="sw-font-size-4xl sw-text-color-default sw-font-family-default sw-font-weight-default sw-padding-top-none sw-padding-bottom-4xs sw-letter-spacing-normal sw-line-height-normal ">     Project Milestone Sprint    </h2>
+                <h2 class="sw-font-size-4xl sw-text-color-default sw-font-family-default sw-font-weight-default sw-padding-top-none sw-padding-bottom-4xs sw-letter-spacing-normal sw-line-height-normal ">     Milestone Sprint    </h2>
                 <p class="sw-font-size-xl sw-text-color-default sw-font-family-default sw-font-weight-default sw-padding-top-none sw-padding-bottom-m sw-letter-spacing-normal sw-line-height-loose ">      <i>Monday, November 7th - 13th, 2022</i> </p>
             </div>
-            <div class="row align-items-center">
-                <div class="col-md-6 text-center">
-                    <img id="feature1-display-img" src="https://softr-prod.imgix.net/applications/8b8577c9-0a43-4f84-8d97-e9e6db87f72a/assets/91679cb0-a9b4-406a-bc47-ff6a700533c6.png" class="sw-percentage-width-full sw-border-style-none sw-border-width-xs sw-border-color-2e4460 sw-border-radius-none mx-auto d-block" alt="Our awesome features">
-                </div>
-                <div class="col-md-6 text-center text-lg-left pt-5 pt-lg-0">
+            <div class="align-items-center" style="">
+                <div class="col-md-9 text-center text-lg-left pt-5 pt-lg-0" style="margin-left: 12%; margin-right: 12%">
                     <div class="row">
                         <div class="col-12">
                             <div class="s-feature-box active" data-img="https://softr-prod.imgix.net/applications/8b8577c9-0a43-4f84-8d97-e9e6db87f72a/assets/91679cb0-a9b4-406a-bc47-ff6a700533c6.png" data-img-alt="Our awesome features" data-img-classes="sw-percentage-width-full sw-border-style-none sw-border-width-xs sw-border-color-2e4460 sw-border-radius-none  mx-auto d-block">
                                 <!-- <h6 class="sw-font-size-l sw-text-color-default sw-font-family-default sw-font-weight-medium sw-letter-spacing-normal sw-margin-bottom-6xs sw-margin-top-none">         Updates:        </h6> -->
                                 <p class="sw-font-size-m sw-text-color-default sw-font-family-default sw-font-weight-default sw-line-height-loose sw-letter-spacing-normal ">        Previously, in our classes that we have taken so far in our university career, we always felt that we needed a tool to help us visualize and annotate in 3D in an immersive nature. For example, inspecting different shapes in Topology classes to formulating molecules in Orgo classes, we always felt a desire to be able to see these things and annotate and take notes in 3D. With VR being the next frontier in visual computing with an uncomparable immersive richness, we think a VR 3D note-taking app is in an unique position to fulfill our needs for these classes, and hopefully for the billions of students worldwide too. </p>
-                                <img class="d-md-none mobile-img sw-percentage-width-full sw-border-style-none sw-border-width-xs sw-border-color-2e4460 sw-border-radius-none  mx-auto d-block" src="https://softr-prod.imgix.net/applications/8b8577c9-0a43-4f84-8d97-e9e6db87f72a/assets/91679cb0-a9b4-406a-bc47-ff6a700533c6.png" alt="Our awesome features">
-                            </div>
-                        </div>
-                        <div class="col-12">
-                            <div class="s-feature-box" data-img="https://softr-prod.imgix.net/applications/8b8577c9-0a43-4f84-8d97-e9e6db87f72a/assets/9bcc4bc5-b0f5-4b85-9891-cebf658fa296.png" data-img-alt="Our awesome features" data-img-classes="sw-percentage-width-full sw-border-style-none sw-border-width-xs sw-border-color-2e4460 sw-border-radius-none  mx-auto d-block">
-                                <h6 class="sw-font-size-l sw-text-color-default sw-font-family-default sw-font-weight-medium sw-letter-spacing-normal sw-margin-bottom-6xs sw-margin-top-none">         Spaces        </h6>
-                                <p class="sw-font-size-m sw-text-color-default sw-font-family-default sw-font-weight-default sw-line-height-loose sw-letter-spacing-normal ">         Create community topics and allow members to join them         </p>
-                                <img class="d-md-none mobile-img sw-percentage-width-full sw-border-style-none sw-border-width-xs sw-border-color-2e4460 sw-border-radius-none  mx-auto d-block" src="https://softr-prod.imgix.net/applications/8b8577c9-0a43-4f84-8d97-e9e6db87f72a/assets/9bcc4bc5-b0f5-4b85-9891-cebf658fa296.png" alt="Our awesome features">
-                            </div>
-                        </div>
-                        <div class="col-12">
-                            <div class="s-feature-box" data-img="https://softr-prod.imgix.net/applications/8b8577c9-0a43-4f84-8d97-e9e6db87f72a/assets/ba41f531-73fd-471f-8a52-8b250d7e097d.png" data-img-alt="Our awesome features" data-img-classes="sw-percentage-width-full sw-border-style-none sw-border-width-xs sw-border-color-2e4460 sw-border-radius-none  mx-auto d-block">
-                                <h6 class="sw-font-size-l sw-text-color-default sw-font-family-default sw-font-weight-medium sw-letter-spacing-normal sw-margin-bottom-6xs sw-margin-top-none">         Resources        </h6>
-                                <p class="sw-font-size-m sw-text-color-default sw-font-family-default sw-font-weight-default sw-line-height-loose sw-letter-spacing-normal ">         A resource list crowdsourced from the community        </p>
-                                <img class="d-md-none mobile-img sw-percentage-width-full sw-border-style-none sw-border-width-xs sw-border-color-2e4460 sw-border-radius-none  mx-auto d-block" src="https://softr-prod.imgix.net/applications/8b8577c9-0a43-4f84-8d97-e9e6db87f72a/assets/ba41f531-73fd-471f-8a52-8b250d7e097d.png" alt="Our awesome features">
-                            </div>
-                        </div>
-                        <div class="col-12">
-                            <div class="s-feature-box" data-img="https://softr-prod.imgix.net/applications/8b8577c9-0a43-4f84-8d97-e9e6db87f72a/assets/07e2dc44-2c75-4af7-aa3a-c4fb59631ef3.png" data-img-alt="Our awesome features" data-img-classes="sw-percentage-width-full sw-border-style-none sw-border-width-xs sw-border-color-2e4460 sw-border-radius-none  mx-auto d-block">
-                                <h6 class="sw-font-size-l sw-text-color-default sw-font-family-default sw-font-weight-medium sw-letter-spacing-normal sw-margin-bottom-6xs sw-margin-top-none">         Jobs        </h6>
-                                <p class="sw-font-size-m sw-text-color-default sw-font-family-default sw-font-weight-default sw-line-height-loose sw-letter-spacing-normal ">         Community job board. Community members can also submit job opportunities        </p>
-                                <img class="d-md-none mobile-img sw-percentage-width-full sw-border-style-none sw-border-width-xs sw-border-color-2e4460 sw-border-radius-none  mx-auto d-block" src="https://softr-prod.imgix.net/applications/8b8577c9-0a43-4f84-8d97-e9e6db87f72a/assets/07e2dc44-2c75-4af7-aa3a-c4fb59631ef3.png" alt="Our awesome features">
-                            </div>
-                        </div>
-                        <div class="col-12">
-                            <div class="s-feature-box" data-img="https://softr-prod.imgix.net/applications/8b8577c9-0a43-4f84-8d97-e9e6db87f72a/assets/e6fee1c4-5162-4efc-9714-c7711dcf22fd.png" data-img-alt="Our awesome features" data-img-classes="sw-percentage-width-full sw-border-style-none sw-border-width-xs sw-border-color-2e4460 sw-border-radius-none  mx-auto d-block">
-                                <h6 class="sw-font-size-l sw-text-color-default sw-font-family-default sw-font-weight-medium sw-letter-spacing-normal sw-margin-bottom-6xs sw-margin-top-none">         Member Bios        </h6>
-                                <p class="sw-font-size-m sw-text-color-default sw-font-family-default sw-font-weight-default sw-line-height-loose sw-letter-spacing-normal ">         Community member bios. Show all members in your community and encourage collaboration        </p>
-                                <img class="d-md-none mobile-img sw-percentage-width-full sw-border-style-none sw-border-width-xs sw-border-color-2e4460 sw-border-radius-none  mx-auto d-block" src="https://softr-prod.imgix.net/applications/8b8577c9-0a43-4f84-8d97-e9e6db87f72a/assets/e6fee1c4-5162-4efc-9714-c7711dcf22fd.png" alt="Our awesome features">
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </section>
-    <section id="feature1" data-block-version="2.0.1" data-block-id="e6406a63-9b0f-426d-b05c-2439692dcb64" data-block-updated="Tue Sep 06 2022 00:21:55 GMT+0400 (Armenia Standard Time)" style="" class="feature4-e6406a63-9b0f-426d-b05c-2439692dcb64 sw-background-color-ffffff sw-padding-top-2xl sw-padding-bottom-2xl sw-border-top-style-none sw-border-top-width-xs sw-border-top-color-2e4460 sw-border-bottom-style-none sw-border-bottom-width-xs sw-border-bottom-color-2e4460  sw-background-repeat-no-repeat sw-background-size-cover sw-background-position-center sw-background-attachment-scroll ">
-        <div class="container">
-            <div class="col-12 text-center">
-                <h2 class="sw-font-size-4xl sw-text-color-default sw-font-family-default sw-font-weight-default sw-padding-top-none sw-padding-bottom-4xs sw-letter-spacing-normal sw-line-height-normal ">     The community in a box    </h2>
-                <p class="sw-font-size-xl sw-text-color-default sw-font-family-default sw-font-weight-default sw-padding-top-none sw-padding-bottom-m sw-letter-spacing-normal sw-line-height-loose ">      The perfect template for community builders. Start your community today.      </p>
-            </div>
-            <div class="row align-items-center">
-                <div class="col-md-6 text-center">
-                    <img id="feature1-display-img" src="https://softr-prod.imgix.net/applications/8b8577c9-0a43-4f84-8d97-e9e6db87f72a/assets/91679cb0-a9b4-406a-bc47-ff6a700533c6.png" class="sw-percentage-width-full sw-border-style-none sw-border-width-xs sw-border-color-2e4460 sw-border-radius-none mx-auto d-block" alt="Our awesome features">
-                </div>
-                <div class="col-md-6 text-center text-lg-left pt-5 pt-lg-0">
-                    <div class="row">
-                        <div class="col-12">
-                            <div class="s-feature-box active" data-img="https://softr-prod.imgix.net/applications/8b8577c9-0a43-4f84-8d97-e9e6db87f72a/assets/91679cb0-a9b4-406a-bc47-ff6a700533c6.png" data-img-alt="Our awesome features" data-img-classes="sw-percentage-width-full sw-border-style-none sw-border-width-xs sw-border-color-2e4460 sw-border-radius-none  mx-auto d-block">
-                                <h6 class="sw-font-size-l sw-text-color-default sw-font-family-default sw-font-weight-medium sw-letter-spacing-normal sw-margin-bottom-6xs sw-margin-top-none">         Events        </h6>
-                                <p class="sw-font-size-m sw-text-color-default sw-font-family-default sw-font-weight-default sw-line-height-loose sw-letter-spacing-normal ">         Members can view and add their attendance together with event permissions        </p>
-                                <img class="d-md-none mobile-img sw-percentage-width-full sw-border-style-none sw-border-width-xs sw-border-color-2e4460 sw-border-radius-none  mx-auto d-block" src="https://softr-prod.imgix.net/applications/8b8577c9-0a43-4f84-8d97-e9e6db87f72a/assets/91679cb0-a9b4-406a-bc47-ff6a700533c6.png" alt="Our awesome features">
-                            </div>
-                        </div>
-                        <div class="col-12">
-                            <div class="s-feature-box" data-img="https://softr-prod.imgix.net/applications/8b8577c9-0a43-4f84-8d97-e9e6db87f72a/assets/9bcc4bc5-b0f5-4b85-9891-cebf658fa296.png" data-img-alt="Our awesome features" data-img-classes="sw-percentage-width-full sw-border-style-none sw-border-width-xs sw-border-color-2e4460 sw-border-radius-none  mx-auto d-block">
-                                <h6 class="sw-font-size-l sw-text-color-default sw-font-family-default sw-font-weight-medium sw-letter-spacing-normal sw-margin-bottom-6xs sw-margin-top-none">         Spaces        </h6>
-                                <p class="sw-font-size-m sw-text-color-default sw-font-family-default sw-font-weight-default sw-line-height-loose sw-letter-spacing-normal ">         Create community topics and allow members to join them         </p>
-                                <img class="d-md-none mobile-img sw-percentage-width-full sw-border-style-none sw-border-width-xs sw-border-color-2e4460 sw-border-radius-none  mx-auto d-block" src="https://softr-prod.imgix.net/applications/8b8577c9-0a43-4f84-8d97-e9e6db87f72a/assets/9bcc4bc5-b0f5-4b85-9891-cebf658fa296.png" alt="Our awesome features">
-                            </div>
-                        </div>
-                        <div class="col-12">
-                            <div class="s-feature-box" data-img="https://softr-prod.imgix.net/applications/8b8577c9-0a43-4f84-8d97-e9e6db87f72a/assets/ba41f531-73fd-471f-8a52-8b250d7e097d.png" data-img-alt="Our awesome features" data-img-classes="sw-percentage-width-full sw-border-style-none sw-border-width-xs sw-border-color-2e4460 sw-border-radius-none  mx-auto d-block">
-                                <h6 class="sw-font-size-l sw-text-color-default sw-font-family-default sw-font-weight-medium sw-letter-spacing-normal sw-margin-bottom-6xs sw-margin-top-none">         Resources        </h6>
-                                <p class="sw-font-size-m sw-text-color-default sw-font-family-default sw-font-weight-default sw-line-height-loose sw-letter-spacing-normal ">         A resource list crowdsourced from the community        </p>
-                                <img class="d-md-none mobile-img sw-percentage-width-full sw-border-style-none sw-border-width-xs sw-border-color-2e4460 sw-border-radius-none  mx-auto d-block" src="https://softr-prod.imgix.net/applications/8b8577c9-0a43-4f84-8d97-e9e6db87f72a/assets/ba41f531-73fd-471f-8a52-8b250d7e097d.png" alt="Our awesome features">
-                            </div>
-                        </div>
-                        <div class="col-12">
-                            <div class="s-feature-box" data-img="https://softr-prod.imgix.net/applications/8b8577c9-0a43-4f84-8d97-e9e6db87f72a/assets/07e2dc44-2c75-4af7-aa3a-c4fb59631ef3.png" data-img-alt="Our awesome features" data-img-classes="sw-percentage-width-full sw-border-style-none sw-border-width-xs sw-border-color-2e4460 sw-border-radius-none  mx-auto d-block">
-                                <h6 class="sw-font-size-l sw-text-color-default sw-font-family-default sw-font-weight-medium sw-letter-spacing-normal sw-margin-bottom-6xs sw-margin-top-none">         Jobs        </h6>
-                                <p class="sw-font-size-m sw-text-color-default sw-font-family-default sw-font-weight-default sw-line-height-loose sw-letter-spacing-normal ">         Community job board. Community members can also submit job opportunities        </p>
-                                <img class="d-md-none mobile-img sw-percentage-width-full sw-border-style-none sw-border-width-xs sw-border-color-2e4460 sw-border-radius-none  mx-auto d-block" src="https://softr-prod.imgix.net/applications/8b8577c9-0a43-4f84-8d97-e9e6db87f72a/assets/07e2dc44-2c75-4af7-aa3a-c4fb59631ef3.png" alt="Our awesome features">
-                            </div>
-                        </div>
-                        <div class="col-12">
-                            <div class="s-feature-box" data-img="https://softr-prod.imgix.net/applications/8b8577c9-0a43-4f84-8d97-e9e6db87f72a/assets/e6fee1c4-5162-4efc-9714-c7711dcf22fd.png" data-img-alt="Our awesome features" data-img-classes="sw-percentage-width-full sw-border-style-none sw-border-width-xs sw-border-color-2e4460 sw-border-radius-none  mx-auto d-block">
-                                <h6 class="sw-font-size-l sw-text-color-default sw-font-family-default sw-font-weight-medium sw-letter-spacing-normal sw-margin-bottom-6xs sw-margin-top-none">         Member Bios        </h6>
-                                <p class="sw-font-size-m sw-text-color-default sw-font-family-default sw-font-weight-default sw-line-height-loose sw-letter-spacing-normal ">         Community member bios. Show all members in your community and encourage collaboration        </p>
-                                <img class="d-md-none mobile-img sw-percentage-width-full sw-border-style-none sw-border-width-xs sw-border-color-2e4460 sw-border-radius-none  mx-auto d-block" src="https://softr-prod.imgix.net/applications/8b8577c9-0a43-4f84-8d97-e9e6db87f72a/assets/e6fee1c4-5162-4efc-9714-c7711dcf22fd.png" alt="Our awesome features">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+
     </section>
     <section id="cta1" style="" data-block-version="2.0.1" data-block-id="03e128be-4859-49f1-a201-aef7f39f2482" data-block-updated="Tue Sep 06 2022 00:21:59 GMT+0400 (Armenia Standard Time)" class="cta3-03e128be-4859-49f1-a201-aef7f39f2482 sw-background-color-eda100 sw-padding-top-2xl sw-padding-bottom-2xl sw-border-top-style-none sw-border-top-width-xs sw-border-top-color-2e4460 sw-border-bottom-style-none sw-border-bottom-width-xs sw-border-bottom-color-2e4460   sw-background-repeat-no-repeat sw-background-size-cover sw-background-position-center sw-background-attachment-scroll ">
         <div class="container">
@@ -1250,7 +1168,7 @@
                 </div>
                 <div class="col-md-6 col-12 pb-2">
                     <div class="nav justify-content-center justify-content-md-end">
-                        <a target="" class="nav-link sw-font-size-xs sw-text-color-999999 sw-font-family-default sw-font-weight-semibold sw-letter-spacing-normal " href="#feature1">        Learn More       </a>
+                        <a target="" class="nav-link sw-font-size-xs sw-text-color-999999 sw-font-family-default sw-font-weight-semibold sw-letter-spacing-normal " href="index.html#feature1">        Learn More       </a>
                     </div>
                 </div>
             </div>

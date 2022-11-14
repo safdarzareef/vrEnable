@@ -584,7 +584,7 @@
             function cleanSlugFromPath(pagePath) {
                 if (pagePath.includes("/r/rec")) {
                     pagePath = pagePath.substring(0, pagePath.indexOf("/r/rec"));
-                    pagePath = pagePath.substring(0, pagePath.lastIndexOf("/"));
+                    pagePath = pagePath.substring(0, pagePath.lastIndexOf("index.html"));
                 }
 
                 return pagePath + (pagePath.endsWith('/') ? '' : '/');
@@ -1040,7 +1040,7 @@
     <nav id="home_header3" data-block-version="2.2.7" data-block-id="6bd9f96e-8e4c-4f15-b5df-e30659237ac5" data-block-updated="Tue Sep 06 2022 00:21:43 GMT+0400 (Armenia Standard Time)" class=" navbar nav navbar-expand-lg navbar-light header1-6bd9f96e-8e4c-4f15-b5df-e30659237ac5 sw-background-color-ffffff sw-padding-top-5xs sw-padding-bottom-5xs sw-border-top-style-none sw-border-top-width-none sw-border-top-color-2e4460 sw-border-bottom-style-none sw-border-bottom-width-none sw-border-bottom-color-2e4460" style="opacity: 1; visibility: visible;">
         <div class="container"> 
             <!-- Logo -->
-            <a class="navbar-brand" href="/">
+            <a class="navbar-brand" href="index.html">
                 <img class="sw-width-11xs " src="CubeNotesLogo.png" alt="" style="width: 200%;">
             </a>
             <div class="desktop-menu text-center justify-content-end">
@@ -1050,11 +1050,10 @@
                         <div class="border-0 dropdown-menu links-dropdown" aria-labelledby="navbarDropdown-0" style="background-color: rgb(255, 255, 255);"></div>
                     </li>
                     <li class="nav-item ">
-                        <!-- change the href in the next line -->
                         <a target="" class="position-relative  sw-font-size-m sw-text-color-eda100 sw-font-family-default sw-font-weight-semibold sw-letter-spacing-normal sw-display-block sw-padding-top-6xs sw-padding-bottom-6xs sw-padding-left-6xs sw-padding-right-xs hover:sw-text-decoration-no-underline active:sw-background-color-transparent" href="devblog.html">     Development Blog     </a>
                         <div class="border-0 dropdown-menu links-dropdown" aria-labelledby="navbarDropdown-0" style="background-color: rgb(255, 255, 255);"></div>
                     </li>
-                    <!-- ADD TOP BANNER ITEMS HERE -->
+                    <!-- 1. ADD TOP BANNER ITEMS HERE AND AT NO. 2 -->
                 </ul>
             </div>
             <!-- mobile toggle -->
@@ -1063,7 +1062,7 @@
             </div>
             <div class="mob-menu-content" style="background-color: rgb(255, 255, 255);">
                 <div class="mob-menu-header">
-                    <a class="navbar-brand" href="/">
+                    <a class="navbar-brand" href="index.html">
                         <img class="sw-width-11xs " src="https://softr-prod.imgix.net/applications/8b8577c9-0a43-4f84-8d97-e9e6db87f72a/assets/9a150a0b-9ec6-4306-a327-e35d2bd5e09b.png" alt="">
                     </a>
                     <span class="navbar-close">
@@ -1082,9 +1081,10 @@
                                         <div class="navigation-section">
                                             <a target="" class="link collapsed d-block sw-font-size-s sw-text-color-261f1f sw-font-family-default sw-font-weight-semibold sw-letter-spacing-normal sw-display-block sw-padding-top-6xs sw-padding-bottom-6xs sw-padding-left-6xs sw-padding-right-xs hover:sw-text-decoration-no-underline active:sw-background-color-transparent" href="#feature1" style="background-color: rgb(255, 255, 255);">    Learn More     </a>
                                         </div>
-                                        <div class="buttons-section">
-                                            <a data-element="button" target="" class="sw-font-size-xs sw-text-color-eda100 sw-font-family-default sw-font-weight-semibold sw-border-radius-default sw-background-color-ffffff sw-padding-left-4xs sw-padding-right-4xs sw-padding-top-6xs sw-padding-bottom-6xs sw-border-style-solid sw-border-width-s sw-border-color-eda100 sw-letter-spacing-normal sw-text-decoration-no-underline hover:sw-text-decoration-no-underline hover:sw-box-shadow-m sw-display-block m:sw-margin-left-6xs" href="/sign-up">LOG IN / APPLY</a>
+                                        <div class="navigation-section">
+                                            <a target="" class="link collapsed d-block sw-font-size-s sw-text-color-261f1f sw-font-family-default sw-font-weight-semibold sw-letter-spacing-normal sw-display-block sw-padding-top-6xs sw-padding-bottom-6xs sw-padding-left-6xs sw-padding-right-xs hover:sw-text-decoration-no-underline active:sw-background-color-transparent" href="devblog.html" style="background-color: rgb(255, 255, 255);">    Development Blog     </a>
                                         </div>
+                                        <!-- 2. ALSO ADD TOP BANNER ITEMS HERE -->
                                     </div>
                                 </div>
                             </div>
@@ -1112,7 +1112,7 @@
                     </div>
                 </div>
                 <div class="col-lg-7 text-center">
-                    <img src="https://softr-prod.imgix.net/applications/8b8577c9-0a43-4f84-8d97-e9e6db87f72a/assets/eaedd810-f5c5-49ea-b0db-72152926ad65.png" class="sw-percentage-width-full sw-border-style-solid sw-border-width-none sw-border-color-2e4460 sw-border-radius-none  mx-auto d-block" alt="Image alt">
+                    <img src="homeimage.png" class="sw-percentage-width-full sw-border-style-solid sw-border-width-none sw-border-color-2e4460 sw-border-radius-none  mx-auto d-block" alt="Image alt">
                 </div>
             </div>
         </div>
