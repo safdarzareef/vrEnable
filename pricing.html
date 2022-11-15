@@ -7,11 +7,11 @@
       content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi, shrink-to-fit=no"
     />
 
-    <meta name="twitter:title" content="Home" />
-    <meta property="twitter:title" content="Home" />
-    <meta property="og:title" content="Home" />
+    <meta name="twitter:title" content="Pricing" />
+    <meta property="twitter:title" content="Pricing" />
+    <meta property="og:title" content="Pricing" />
 
-    <title>Home</title>
+    <title>Development Blog</title>
 
     <link
       href="https://fonts.softr-files.com/google/api/css?family=Pacifico:400&amp;display=swap"
@@ -232,6 +232,30 @@
       }, 1000);
     </script>
 
+    <script type="text/javascript">
+      if (window.jQuery && window.jQuery.ajaxSetup) {
+        window.jQuery.ajaxSetup({
+          beforeSend: function (xhr, settings) {
+            if (
+              settings &&
+              settings.url &&
+              (settings.url.includes("/integrations/airtable/") ||
+                settings.url.includes(
+                  "/v1/applications/8b8577c9-0a43-4f84-8d97-e9e6db87f72a"
+                ) ||
+                settings.url.includes("/v1/comments") ||
+                settings.url.includes("/forms/form-to-email"))
+            ) {
+              xhr.setRequestHeader(
+                "softr-page-id",
+                "3a6a0412-3894-4336-b1b4-7f75b068ce2a"
+              );
+            }
+          },
+        });
+      }
+    </script>
+
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/iframe-resizer/4.2.11/iframeResizer.contentWindow.js"
       crossorigin="anonymous"
@@ -368,7 +392,159 @@
       data-pageid="3a6a0412-3894-4336-b1b4-7f75b068ce2a"
       class="content"
     >
-      <!--#include file="header.html" -->
+      <nav
+        id="home_header3"
+        data-block-version="2.2.7"
+        data-block-id="6bd9f96e-8e4c-4f15-b5df-e30659237ac5"
+        data-block-updated="Tue Sep 06 2022 00:21:43 GMT+0400 (Armenia Standard Time)"
+        class="navbar nav navbar-expand-lg navbar-light header1-6bd9f96e-8e4c-4f15-b5df-e30659237ac5 sw-background-color-ffffff sw-padding-top-5xs sw-padding-bottom-5xs sw-border-top-style-none sw-border-top-width-none sw-border-top-color-2e4460 sw-border-bottom-style-none sw-border-bottom-width-none sw-border-bottom-color-2e4460"
+        style="opacity: 1; visibility: visible"
+      >
+        <div class="container">
+          <!-- Logo -->
+          <a class="navbar-brand" href="index.html">
+            <img
+              class="sw-width-11xs"
+              src="CubeNotesLogo.png"
+              alt=""
+              style="width: 200%"
+            />
+          </a>
+          <div class="desktop-menu text-center justify-content-end">
+            <ul class="navbar-nav align-items-center flex-row one-button">
+              <li class="nav-item">
+                <a
+                  target=""
+                  class="position-relative sw-font-size-m sw-text-color-eda100 sw-font-family-default sw-font-weight-semibold sw-letter-spacing-normal sw-display-block sw-padding-top-6xs sw-padding-bottom-6xs sw-padding-left-6xs sw-padding-right-xs hover:sw-text-decoration-no-underline active:sw-background-color-transparent"
+                  href="index.html"
+                >
+                  Home
+                </a>
+                <div
+                  class="border-0 dropdown-menu links-dropdown"
+                  aria-labelledby="navbarDropdown-0"
+                  style="background-color: rgb(255, 255, 255)"
+                ></div>
+              </li>
+              <li class="nav-item">
+                <a
+                  target=""
+                  class="position-relative sw-font-size-m sw-text-color-eda100 sw-font-family-default sw-font-weight-semibold sw-letter-spacing-normal sw-display-block sw-padding-top-6xs sw-padding-bottom-6xs sw-padding-left-6xs sw-padding-right-xs hover:sw-text-decoration-no-underline active:sw-background-color-transparent"
+                  href="pricing.html"
+                >
+                  Pricing
+                </a>
+                <div
+                  class="border-0 dropdown-menu links-dropdown"
+                  aria-labelledby="navbarDropdown-0"
+                  style="background-color: rgb(255, 255, 255)"
+                ></div>
+              </li>
+              <li class="nav-item">
+                <a
+                  target=""
+                  class="position-relative sw-font-size-m sw-text-color-eda100 sw-font-family-default sw-font-weight-semibold sw-letter-spacing-normal sw-display-block sw-padding-top-6xs sw-padding-bottom-6xs sw-padding-left-6xs sw-padding-right-xs hover:sw-text-decoration-no-underline active:sw-background-color-transparent"
+                  href="devblog.html"
+                >
+                  Development Blog
+                </a>
+                <div
+                  class="border-0 dropdown-menu links-dropdown"
+                  aria-labelledby="navbarDropdown-0"
+                  style="background-color: rgb(255, 255, 255)"
+                ></div>
+              </li>
+              <!-- 1. ADD TOP BANNER ITEMS HERE AND AT NO. 2 -->
+            </ul>
+          </div>
+          <!-- mobile toggle -->
+          <div class="toggle-button">
+            <span class="navbar-toggler-icon"></span>
+          </div>
+          <div
+            class="mob-menu-content"
+            style="background-color: rgb(255, 255, 255)"
+          >
+            <div class="mob-menu-header">
+              <a class="navbar-brand" href="index.html">
+                <img
+                  class="sw-width-11xs"
+                  src="CubeNotesLogo.png"
+                  alt=""
+                  style="width: 200%"
+                />
+              </a>
+              <span class="navbar-close">
+                <i class="fa fa-fw fa-times" aria-hidden="true"></i>
+              </span>
+            </div>
+            <div class="mob-menu-body" data-simplebar="init">
+              <div class="simplebar-wrapper" style="margin: 0px">
+                <div class="simplebar-height-auto-observer-wrapper">
+                  <div class="simplebar-height-auto-observer"></div>
+                </div>
+                <div class="simplebar-mask">
+                  <div class="simplebar-offset" style="right: 0px; bottom: 0px">
+                    <div
+                      class="simplebar-content-wrapper"
+                      tabindex="0"
+                      role="region"
+                      aria-label="scrollable content"
+                      style="height: auto; overflow: hidden"
+                    >
+                      <div class="simplebar-content" style="padding: 0px">
+                        <div class="navigation-section">
+                          <a
+                            target=""
+                            class="link collapsed d-block sw-font-size-s sw-text-color-261f1f sw-font-family-default sw-font-weight-semibold sw-letter-spacing-normal sw-display-block sw-padding-top-6xs sw-padding-bottom-6xs sw-padding-left-6xs sw-padding-right-xs hover:sw-text-decoration-no-underline active:sw-background-color-transparent"
+                            href="#index.htmlfeature1"
+                            style="background-color: rgb(255, 255, 255)"
+                          >
+                            Pricing
+                          </a>
+                        </div>
+                        <div class="navigation-section">
+                          <a
+                            target=""
+                            class="link collapsed d-block sw-font-size-s sw-text-color-261f1f sw-font-family-default sw-font-weight-semibold sw-letter-spacing-normal sw-display-block sw-padding-top-6xs sw-padding-bottom-6xs sw-padding-left-6xs sw-padding-right-xs hover:sw-text-decoration-no-underline active:sw-background-color-transparent"
+                            href="devblog.html"
+                            style="background-color: rgb(255, 255, 255)"
+                          >
+                            Development Blog
+                          </a>
+                        </div>
+                        <!-- 2. ALSO ADD TOP BANNER ITEMS HERE -->
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="simplebar-placeholder"
+                  style="width: 0px; height: 0px"
+                ></div>
+              </div>
+              <div
+                class="simplebar-track simplebar-horizontal"
+                style="visibility: hidden"
+              >
+                <div
+                  class="simplebar-scrollbar"
+                  style="width: 0px; display: none"
+                ></div>
+              </div>
+              <div
+                class="simplebar-track simplebar-vertical"
+                style="visibility: hidden"
+              >
+                <div
+                  class="simplebar-scrollbar"
+                  style="height: 0px; display: none"
+                ></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
       <header
         id="hero1"
         data-block-version="2.0.1"
@@ -380,32 +556,22 @@
           <div class="row align-items-center">
             <div class="col-lg-5 pb-5 pb-lg-0 text-center text-lg-left">
               <h1
-                class="sw-font-size-8xl sw-text-color-ffffff sw-font-family-pacifico sw-font-weight-medium sw-padding-top-none sw-padding-bottom-s sw-letter-spacing-normal sw-line-height-compact"
+                class="sw-font-size-7xl sw-text-color-ffffff sw-font-family-pacifico sw-font-weight-medium sw-padding-top-none sw-padding-bottom-s sw-letter-spacing-normal sw-line-height-compact"
               >
-                Cube Notes
+                Pricing
               </h1>
               <p
                 class="sw-font-size-l sw-text-color-ffffff sw-font-family-default sw-font-weight-default sw-padding-top-none sw-padding-bottom-7xs sw-letter-spacing-normal sw-line-height-loose"
               >
-                The virtual reality note-taking app.<br />Curate your notes in
-                3D.
+                Plans to fit your needs.
               </p>
-              <div
-                class="d-flex justify-content-center justify-content-lg-start flex-wrap"
-              >
-                <a
-                  data-element="button"
-                  target=""
-                  class="sw-font-size-xs sw-text-color-default sw-font-family-default sw-font-weight-semibold sw-border-radius-l sw-background-color-default sw-padding-left-4xs sw-padding-right-4xs sw-padding-top-5xs sw-padding-bottom-5xs sw-border-style-solid sw-border-width-s sw-border-color-ffffff sw-letter-spacing-wider sw-text-decoration-no-underline hover:sw-text-decoration-no-underline hover:sw-box-shadow-m sw-margin-bottom-6xs sw-margin-right-5xs sw-display-inline-block"
-                  href="#feature1"
-                >
-                  Explore Features
-                </a>
-              </div>
+              <!-- <div class="d-flex justify-content-center justify-content-lg-start flex-wrap">
+                        <a data-element="button" target="" class="sw-font-size-xs sw-text-color-default sw-font-family-default sw-font-weight-semibold sw-border-radius-l sw-background-color-default sw-padding-left-4xs sw-padding-right-4xs sw-padding-top-5xs sw-padding-bottom-5xs sw-border-style-solid sw-border-width-s sw-border-color-ffffff sw-letter-spacing-wider sw-text-decoration-no-underline hover:sw-text-decoration-no-underline hover:sw-box-shadow-m sw-margin-bottom-6xs sw-margin-right-5xs sw-display-inline-block" href="#feature1">        Explore Features       </a>
+                    </div> -->
             </div>
             <div class="col-lg-7 text-center">
               <img
-                src="homeimage.png"
+                src="devimage.png"
                 class="sw-percentage-width-full sw-border-style-solid sw-border-width-none sw-border-color-2e4460 sw-border-radius-none mx-auto d-block"
                 alt="Image alt"
               />
@@ -420,84 +586,63 @@
         data-block-updated="Tue Sep 06 2022 00:21:55 GMT+0400 (Armenia Standard Time)"
         class="feature4-e6406a63-9b0f-426d-b05c-2439692dcb64 sw-background-color-ffffff sw-padding-top-2xl sw-padding-bottom-2xl sw-border-top-style-none sw-border-top-width-xs sw-border-top-color-2e4460 sw-border-bottom-style-none sw-border-bottom-width-xs sw-border-bottom-color-2e4460 sw-background-repeat-no-repeat sw-background-size-cover sw-background-position-center sw-background-attachment-scroll"
       >
+        <!-- Begin Sprint Entries -->
         <div class="container">
           <div class="col-12 text-center">
             <h2
               class="sw-font-size-4xl sw-text-color-default sw-font-family-default sw-font-weight-default sw-padding-top-none sw-padding-bottom-4xs sw-letter-spacing-normal sw-line-height-normal"
             >
-              Explore Features
+              Milestone 1 Sprint
             </h2>
             <p
-              class="sw-font-size-xl sw-text-color-default sw-font-family-default sw-font-weight-default sw-padding-top-none sw-padding-bottom-m sw-letter-spacing-normal sw-line-height-loose"
+              class="sw-font-size-xl sw-text-color-default sw-font-family-default sw-font-weight-default sw-padding-top-none sw-padding-bottom-none sw-letter-spacing-normal sw-line-height-loose"
+              style="margin: 0"
             >
-              We've catered unique features to build the perfect ecosystem for
-              students' needs in VR.
+              <i>Monday, November 7th - 13th, 2022</i>
             </p>
           </div>
-          <div class="row align-items-center">
+          <div>
+            <iframe
+              class="col-md-10"
+              style="
+                margin-left: 8%;
+                margin-right: 8%;
+                padding: 3%;
+                aspect-ratio: 1.66;
+                border: 0;
+              "
+              src="https://www.youtube.com/embed/hVo4zZZo3bs"
+            ></iframe>
+          </div>
+          <div class="align-items-center">
             <div
-              class="col-md-9 col-md-offset-2 text-center text-lg-left pt-5 pt-lg-0"
+              class="col-md-9 text-center text-lg-left pt-5 pt-lg-0"
               style="margin-left: 12%; margin-right: 12%"
             >
-              <div class="row" style="gap: 7px">
+              <div class="row">
                 <div class="col-12">
                   <div class="s-feature-box active">
-                    <h6
-                      class="sw-font-size-l sw-text-color-default sw-font-family-default sw-font-weight-medium sw-letter-spacing-normal sw-margin-bottom-6xs sw-margin-top-none"
-                    >
-                      3D Pen
-                    </h6>
+                    <!-- <h6 class="sw-font-size-l sw-text-color-default sw-font-family-default sw-font-weight-medium sw-letter-spacing-normal sw-margin-bottom-6xs sw-margin-top-none">         Updates:        </h6> -->
                     <p
                       class="sw-font-size-m sw-text-color-default sw-font-family-default sw-font-weight-default sw-line-height-loose sw-letter-spacing-normal"
                     >
-                      Draw, write, annotate, and more in 3D with the multicolor
-                      pen.
+                      Previously, in many of the classes we've taken in our
+                      university careers, we've felt that we needed a tool to
+                      help us visualize and annotate in 3D from inspecting
+                      different shapes in Topology classes to formulating
+                      molecules in Orgo classes. Virtual Reality is on the
+                      frontier of visual computing, so VR 3D note-taking is in a
+                      unique position to fulfill our needs for these classes,
+                      and hopefully for the billions of students worldwide, too.
                     </p>
-                  </div>
-                </div>
-                <div class="col-12">
-                  <div class="s-feature-box active">
-                    <h6
-                      class="sw-font-size-l sw-text-color-default sw-font-family-default sw-font-weight-medium sw-letter-spacing-normal sw-margin-bottom-6xs sw-margin-top-none"
-                    >
-                      Sticky Notes
-                    </h6>
+                    <br />
                     <p
                       class="sw-font-size-m sw-text-color-default sw-font-family-default sw-font-weight-default sw-line-height-loose sw-letter-spacing-normal"
                     >
-                      Don't sacrifice legibility in 3D. Organize typed written
-                      notes on movable sticky notes.
-                    </p>
-                  </div>
-                </div>
-                <div class="col-12">
-                  <div class="s-feature-box active">
-                    <h6
-                      class="sw-font-size-l sw-text-color-default sw-font-family-default sw-font-weight-medium sw-letter-spacing-normal sw-margin-bottom-6xs sw-margin-top-none"
-                    >
-                      Premade 3D polygons
-                    </h6>
-                    <p
-                      class="sw-font-size-m sw-text-color-default sw-font-family-default sw-font-weight-default sw-line-height-loose sw-letter-spacing-normal"
-                    >
-                      View, scale, and annotate 3D polygons to better understand
-                      their geometry.
-                    </p>
-                  </div>
-                </div>
-                <div class="col-12">
-                  <div class="s-feature-box active">
-                    <h6
-                      class="sw-font-size-l sw-text-color-default sw-font-family-default sw-font-weight-medium sw-letter-spacing-normal sw-margin-bottom-6xs sw-margin-top-none"
-                    >
-                      Built-in Video Viewer
-                    </h6>
-                    <p
-                      class="sw-font-size-m sw-text-color-default sw-font-family-default sw-font-weight-default sw-line-height-loose sw-letter-spacing-normal"
-                    >
-                      It's hard to take notes in VR if you need to take your
-                      headset off to watch a lecture, so we've brought the
-                      lecture to VR.
+                      In this week of development we focused on establishing our
+                      space and navigation controls. We also began implementing
+                      drawing ability including optimizing smooth paths,
+                      enabling color changing, and implementing world tracking.
                     </p>
                   </div>
                 </div>
@@ -506,65 +651,6 @@
           </div>
         </div>
       </section>
-      <!-- <section
-        id="cta1"
-        data-block-version="2.0.1"
-        data-block-id="03e128be-4859-49f1-a201-aef7f39f2482"
-        data-block-updated="Tue Sep 06 2022 00:21:59 GMT+0400 (Armenia Standard Time)"
-        class="cta3-03e128be-4859-49f1-a201-aef7f39f2482 sw-background-color-eda100 sw-padding-top-2xl sw-padding-bottom-2xl sw-border-top-style-none sw-border-top-width-xs sw-border-top-color-2e4460 sw-border-bottom-style-none sw-border-bottom-width-xs sw-border-bottom-color-2e4460 sw-background-repeat-no-repeat sw-background-size-cover sw-background-position-center sw-background-attachment-scroll"
-      >
-        <div class="container">
-          <div class="row align-items-center">
-            <div
-              class="col-12 text-center sw-background-color-none sw-border-style-none sw-border-width-xs sw-border-color-2e4460 sw-border-radius-none sw-box-shadow-none sw-padding-top-none sw-padding-bottom-none"
-            >
-              <h2
-                class="sw-font-size-4xl sw-text-color-ffffff sw-font-family-default sw-font-weight-medium sw-padding-top-none sw-padding-bottom-6xs sw-letter-spacing-normal sw-line-height-normal"
-              >
-                Stay Updated
-              </h2>
-              <p
-                class="sw-font-size-m sw-text-color-ffffff sw-font-family-default sw-font-weight-normal sw-padding-top-none sw-padding-bottom-xs sw-letter-spacing-normal sw-line-height-loose"
-              >
-                Follow us as we journey through the development process.
-              </p>
-              <div
-                class="fields-parent-container d-flex justify-content-center flex-wrap mx-sm-3"
-              >
-                <input
-                  id="sw-email-capture-email-input"
-                  type="text"
-                  class="sw-background-color-ffffff sw-font-size-s sw-text-color-2e4460 sw-font-family-default sw-border-radius-l sw-width-2xs sw-padding-top-none sw-padding-bottom-none sw-border-style-none sw-border-width-xs sw-border-color-2e4460 sw-box-shadow-none sw-margin-bottom-6xs sw-margin-left-5xs sw-display-inline-block sw-padding-left-5xs sw-outline-none"
-                  placeholder="Email"
-                />
-                <a
-                  data-element="button"
-                  id="sw-email-capture-submit-btn"
-                  class="sw-font-size-xs sw-text-color-default sw-font-family-default sw-font-weight-semibold sw-border-radius-default sw-background-color-eda100 sw-padding-left-3xs sw-padding-right-3xs sw-padding-top-4xs sw-padding-bottom-4xs sw-border-style-solid sw-border-width-s sw-border-color-ffffff sw-letter-spacing-normal sw-text-decoration-no-underline hover:sw-text-decoration-no-underline hover:sw-box-shadow-m sw-margin-bottom-6xs sw-margin-left-5xs sw-display-inline-block"
-                  href="javascript:void(0);"
-                >
-                  SUBSCRIBE
-                  <div
-                    class="spinner-border sw-btn-spinner d-none text-light"
-                    role="status"
-                  >
-                    <span class="sr-only">Loading...</span>
-                  </div>
-                  <i class="fa fa-fw fa-check d-none" aria-hidden="true"></i>
-                </a>
-                <p
-                  id="sw-form-success-message"
-                  data-success-action-state="SHOW_MESSAGE"
-                  data-success-action-path="NO_ACTION"
-                  class="col-12 text-center d-none sw-font-size-l sw-text-color-ffffff sw-font-family-default sw-font-weight-default sw-padding-top-none sw-padding-bottom-none sw-letter-spacing-wider"
-                >
-                  Thank you!
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section> -->
       <footer
         id="home_footer3"
         data-block-version="2.0.1"
@@ -587,33 +673,13 @@
                 <a
                   target=""
                   class="nav-link sw-font-size-xs sw-text-color-default sw-font-family-default sw-font-weight-semibold sw-letter-spacing-normal"
-                  href="#feature1"
+                  href="index.html"
                 >
                   Home
                 </a>
               </div>
             </div>
           </div>
-          <!-- <div class="row">
-                <div class="col-12">
-                    <hr class="sw-margin-top-3xs sw-margin-bottom-3xs sw-border-top-style-solid sw-border-top-width-xs sw-border-top-color-eda100 ">
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-5">
-                    <div class="text-right">
-                        <a href="https://facebook.com/mycompany" target="_blank" class="sw-text-color-eda100 sw-font-size-m sw-width-11xs sw-display-inline-block">
-                            <i class="fab fa-facebook-f"></i>
-                        </a>
-                        <a href="https://twitter.com/mycompany" target="_blank" class="sw-text-color-eda100 sw-font-size-m sw-width-11xs sw-display-inline-block">
-                            <i class="fab fa-twitter"></i>
-                        </a>
-                        <a href="https://instagram.com/mycompany" target="_blank" class="sw-text-color-eda100 sw-font-size-m sw-width-11xs sw-display-inline-block">
-                            <i class="fab fa-instagram"></i>
-                        </a>
-                    </div>
-                </div>
-            </div> -->
         </div>
       </footer>
     </div>
