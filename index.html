@@ -363,12 +363,25 @@
       });
     </script>
 
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.js"
+      integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      $(function () {
+        console.log("hello");
+        $("#header").load("header.html");
+        $("#footer").load("footer.html");
+      });
+    </script>
+
     <div
       data-appid="8b8577c9-0a43-4f84-8d97-e9e6db87f72a"
       data-pageid="3a6a0412-3894-4336-b1b4-7f75b068ce2a"
       class="content"
     >
-      <!--#include file="header.html" -->
+      <div id="header"></div>
       <header
         id="hero1"
         data-block-version="2.0.1"
@@ -565,57 +578,7 @@
           </div>
         </div>
       </section> -->
-      <footer
-        id="home_footer3"
-        data-block-version="2.0.1"
-        data-block-id="38cc64d1-91e2-4372-8e27-6c1aa8bb7609"
-        data-block-updated="Tue Sep 06 2022 00:22:04 GMT+0400 (Armenia Standard Time)"
-        class="footer1-38cc64d1-91e2-4372-8e27-6c1aa8bb7609 sw-background-color-ffffff sw-padding-top-4xs sw-padding-bottom-4xs sw-border-top-style-none sw-border-top-width-xs sw-border-top-color-2e4460 sw-border-bottom-style-none sw-border-bottom-width-xs sw-border-bottom-color-2e4460"
-      >
-        <div class="container">
-          <div class="row align-items-center">
-            <div class="col-md-6 col-12 text-center text-md-left pb-md-2 pb-5">
-              <img class="sw-width-11xs" src="CubeNotesLogo.png" alt="" />
-              <small
-                class="sw-font-size-m sw-text-color-default sw-font-family-default sw-font-weight-default sw-padding-top-none sw-padding-bottom-3xs"
-                style="padding-left: 5%"
-                >© 2022 Crazier Chicken. All rights reserved.</small
-              >
-            </div>
-            <div class="col-md-6 col-12 pb-2">
-              <div class="nav justify-content-center justify-content-md-end">
-                <a
-                  target=""
-                  class="nav-link sw-font-size-xs sw-text-color-default sw-font-family-default sw-font-weight-semibold sw-letter-spacing-normal"
-                  href=""
-                >
-                  Home
-                </a>
-              </div>
-            </div>
-          </div>
-          <!-- <div class="row">
-                <div class="col-12">
-                    <hr class="sw-margin-top-3xs sw-margin-bottom-3xs sw-border-top-style-solid sw-border-top-width-xs sw-border-top-color-eda100 ">
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-5">
-                    <div class="text-right">
-                        <a href="https://facebook.com/mycompany" target="_blank" class="sw-text-color-eda100 sw-font-size-m sw-width-11xs sw-display-inline-block">
-                            <i class="fab fa-facebook-f"></i>
-                        </a>
-                        <a href="https://twitter.com/mycompany" target="_blank" class="sw-text-color-eda100 sw-font-size-m sw-width-11xs sw-display-inline-block">
-                            <i class="fab fa-twitter"></i>
-                        </a>
-                        <a href="https://instagram.com/mycompany" target="_blank" class="sw-text-color-eda100 sw-font-size-m sw-width-11xs sw-display-inline-block">
-                            <i class="fab fa-instagram"></i>
-                        </a>
-                    </div>
-                </div>
-            </div> -->
-        </div>
-      </footer>
+      <div id="footer"></div>
     </div>
   </body>
 </html>
