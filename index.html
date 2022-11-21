@@ -192,24 +192,3 @@
         </div>
     </body>
 </html>
-<!-- Mobile Menu Toggle -->
-<script src="https://v2.vuejs.org/js/vue.js"></script>
-<script>
-    var V = new Vue({
-        el: '#home_header3',
-        data: {
-            shown: false
-        },
-        methods: {
-            toggle: function () {
-                console.log(this.shown);
-                if (this.shown) {
-                    $('mob-menu-content').removeClass('show');
-                } else {
-                    $('mob-menu-content').addClass('show');
-                }
-                this.shown = !this.shown;
-            }
-        }
-    })
-</script>
