@@ -1,584 +1,354 @@
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta
-      name="viewport"
-      content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi, shrink-to-fit=no"
-    />
-
-    <meta name="twitter:title" content="Home" />
-    <meta property="twitter:title" content="Home" />
-    <meta property="og:title" content="Home" />
-
-    <title>Home</title>
-
-    <link
-      href="https://fonts.softr-files.com/google/api/css?family=Pacifico:400&amp;display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.softr-files.com/google/api/css?family=Inter:100,200,300,400,500,600,700,800,900&amp;display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css"
-      rel="stylesheet"
-    />
-    <link
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.css"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="style.css" />
-    <link
-      href="https://fonts.softr-files.com/google/api/css?family=Nunito+Sans:600&amp;display=swap"
-      rel="stylesheet"
-    />
-
-    <script>
-      document.addEventListener("DOMContentLoaded", () => {
-        if ($(window).width() < 768) {
-          $("h1.sw-font-size-10xl")
-            .removeClass("sw-font-size-10xl")
-            .addClass("sw-font-size-5xl");
-          $("h1.sw-font-size-9xl")
-            .removeClass("sw-font-size-9xl")
-            .addClass("sw-font-size-5xl");
-          $("h1.sw-font-size-8xl")
-            .removeClass("sw-font-size-8xl")
-            .addClass("sw-font-size-5xl");
-          $("h1.sw-font-size-7xl")
-            .removeClass("sw-font-size-7xl")
-            .addClass("sw-font-size-5xl");
-          $("h1.sw-font-size-6xl")
-            .removeClass("sw-font-size-6xl")
-            .addClass("sw-font-size-4xl");
-          $("h2.sw-font-size-10xl")
-            .removeClass("sw-font-size-10xl")
-            .addClass("sw-font-size-5xl");
-          $("h2.sw-font-size-9xl")
-            .removeClass("sw-font-size-9xl")
-            .addClass("sw-font-size-5xl");
-          $("h2.sw-font-size-8xl")
-            .removeClass("sw-font-size-8xl")
-            .addClass("sw-font-size-5xl");
-          $("h2.sw-font-size-7xl")
-            .removeClass("sw-font-size-7xl")
-            .addClass("sw-font-size-5xl");
-          $("h2.sw-font-size-6xl")
-            .removeClass("sw-font-size-6xl")
-            .addClass("sw-font-size-4xl");
-          $("div.sw-font-size-10xl")
-            .removeClass("sw-font-size-10xl")
-            .addClass("sw-font-size-5xl");
-          $("div.sw-font-size-9xl")
-            .removeClass("sw-font-size-9xl")
-            .addClass("sw-font-size-5xl");
-          $("div.sw-font-size-8xl")
-            .removeClass("sw-font-size-8xl")
-            .addClass("sw-font-size-5xl");
-          $("div.sw-font-size-7xl")
-            .removeClass("sw-font-size-7xl")
-            .addClass("sw-font-size-5xl");
-          $("div.sw-font-size-6xl")
-            .removeClass("sw-font-size-6xl")
-            .addClass("sw-font-size-4xl");
-          $("p.sw-font-size-10xl")
-            .removeClass("sw-font-size-10xl")
-            .addClass("sw-font-size-5xl");
-          $("p.sw-font-size-9xl")
-            .removeClass("sw-font-size-9xl")
-            .addClass("sw-font-size-5xl");
-          $("p.sw-font-size-8xl")
-            .removeClass("sw-font-size-8xl")
-            .addClass("sw-font-size-5xl");
-          $("p.sw-font-size-7xl")
-            .removeClass("sw-font-size-7xl")
-            .addClass("sw-font-size-5xl");
-          $("p.sw-font-size-6xl")
-            .removeClass("sw-font-size-6xl")
-            .addClass("sw-font-size-4xl");
-          $("span.sw-font-size-10xl")
-            .removeClass("sw-font-size-10xl")
-            .addClass("sw-font-size-5xl");
-          $("span.sw-font-size-9xl")
-            .removeClass("sw-font-size-9xl")
-            .addClass("sw-font-size-5xl");
-          $("span.sw-font-size-8xl")
-            .removeClass("sw-font-size-8xl")
-            .addClass("sw-font-size-5xl");
-          $("span.sw-font-size-7xl")
-            .removeClass("sw-font-size-7xl")
-            .addClass("sw-font-size-5xl");
-          $("span.sw-font-size-6xl")
-            .removeClass("sw-font-size-6xl")
-            .addClass("sw-font-size-4xl");
-        }
-      });
-    </script>
-
-    <script>
-      window["is401Page"] = false;
-    </script>
-
-    <script>
-      /** Image lineup on mobile **/
-      document.addEventListener("DOMContentLoaded", function () {
-        function changeImageDirectionsOnMobile() {
-          const classListSection = $("body>div>section")
-            ?.attr("class")
-            ?.split(/\s+/);
-          const textClassSection = classListSection?.find((cls) =>
-            cls.startsWith("feature")
-          );
-
-          const classListHeader = $("body>div>header")
-            ?.attr("class")
-            ?.split(/\s+/);
-          const textClassHeader = classListHeader?.find((cls) =>
-            cls.startsWith("hero")
-          );
-
-          /*If FEATURE block*/
-          if (textClassSection) {
-            findRowsWidthImageAndReverse(textClassSection);
-          }
-
-          /*If HERO block*/
-          if (textClassHeader) {
-            findRowsWidthImageAndReverse(textClassHeader);
-          }
-        }
-
-        function findRowsWidthImageAndReverse(textClass) {
-          const rowsWithImages = $("." + textClass + " .row.align-items-center")
-            .has("img")
-            .toArray();
-          const rowsWithLeftSideImages = rowsWithImages.filter((row) => {
-            return (
-              $(row).children().first().children().first().prop("tagName") ===
-              "IMG"
-            );
-          });
-
-          rowsWithLeftSideImages.forEach((row) => {
-            if ($(window).width() <= 768) {
-              row.classList.add("flex-column-reverse");
+    <head>
+        <meta charset="utf-8"/>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi, shrink-to-fit=no"/>
+        <meta name="twitter:title" content="Home"/>
+        <meta property="twitter:title" content="Home"/>
+        <meta property="og:title" content="Home"/>
+        <title>Cube Notes</title>
+        <link href="https://fonts.softr-files.com/google/api/css?family=Pacifico:400&amp;display=swap" rel="stylesheet"/>
+        <link href="https://fonts.softr-files.com/google/api/css?family=Inter:100,200,300,400,500,600,700,800,900&amp;display=swap" rel="stylesheet"/>
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet"/>
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.css" rel="stylesheet"/>
+        <link href="https://fonts.softr-files.com/google/api/css?family=Nunito+Sans:600&amp;display=swap" rel="stylesheet"/>
+        <link rel="stylesheet" href="style.css"/>
+        <script>
+            document.addEventListener("DOMContentLoaded", () => {
+                  if ($(window).width() < 768) {
+                    $("h1.sw-font-size-10xl").removeClass("sw-font-size-10xl").addClass("sw-font-size-5xl");
+                    $("h1.sw-font-size-9xl").removeClass("sw-font-size-9xl").addClass("sw-font-size-5xl");
+                    $("h1.sw-font-size-8xl").removeClass("sw-font-size-8xl").addClass("sw-font-size-5xl");
+                    $("h1.sw-font-size-7xl").removeClass("sw-font-size-7xl").addClass("sw-font-size-5xl");
+                    $("h1.sw-font-size-6xl").removeClass("sw-font-size-6xl").addClass("sw-font-size-4xl");
+                    $("h2.sw-font-size-10xl").removeClass("sw-font-size-10xl").addClass("sw-font-size-5xl");
+                    $("h2.sw-font-size-9xl").removeClass("sw-font-size-9xl").addClass("sw-font-size-5xl");
+                    $("h2.sw-font-size-8xl").removeClass("sw-font-size-8xl").addClass("sw-font-size-5xl");
+                    $("h2.sw-font-size-7xl").removeClass("sw-font-size-7xl").addClass("sw-font-size-5xl");
+                    $("h2.sw-font-size-6xl").removeClass("sw-font-size-6xl").addClass("sw-font-size-4xl");
+                    $("div.sw-font-size-10xl").removeClass("sw-font-size-10xl").addClass("sw-font-size-5xl");
+                    $("div.sw-font-size-9xl").removeClass("sw-font-size-9xl").addClass("sw-font-size-5xl");
+                    $("div.sw-font-size-8xl").removeClass("sw-font-size-8xl").addClass("sw-font-size-5xl");
+                    $("div.sw-font-size-7xl").removeClass("sw-font-size-7xl").addClass("sw-font-size-5xl");
+                    $("div.sw-font-size-6xl").removeClass("sw-font-size-6xl").addClass("sw-font-size-4xl");
+                    $("p.sw-font-size-10xl").removeClass("sw-font-size-10xl").addClass("sw-font-size-5xl");
+                    $("p.sw-font-size-9xl").removeClass("sw-font-size-9xl").addClass("sw-font-size-5xl");
+                    $("p.sw-font-size-8xl").removeClass("sw-font-size-8xl").addClass("sw-font-size-5xl");
+                    $("p.sw-font-size-7xl").removeClass("sw-font-size-7xl").addClass("sw-font-size-5xl");
+                    $("p.sw-font-size-6xl").removeClass("sw-font-size-6xl").addClass("sw-font-size-4xl");
+                    $("span.sw-font-size-10xl").removeClass("sw-font-size-10xl").addClass("sw-font-size-5xl");
+                    $("span.sw-font-size-9xl").removeClass("sw-font-size-9xl").addClass("sw-font-size-5xl");
+                    $("span.sw-font-size-8xl").removeClass("sw-font-size-8xl").addClass("sw-font-size-5xl");
+                    $("span.sw-font-size-7xl").removeClass("sw-font-size-7xl").addClass("sw-font-size-5xl");
+                    $("span.sw-font-size-6xl").removeClass("sw-font-size-6xl").addClass("sw-font-size-4xl");
+              }
+            });
+        </script>
+        <script>
+            window["is401Page"] = false;
+        </script>
+        <script>
+            /** Image lineup on mobile **/
+            document.addEventListener("DOMContentLoaded", function () {
+                  function changeImageDirectionsOnMobile() {
+                    const classListSection = $("body>div>section")
+                          ?.attr("class")
+                          ?.split(/\s+/);
+                    const textClassSection = classListSection?.find((cls) => cls.startsWith("feature"));
+            
+                    const classListHeader = $("body>div>header")
+                        ?.attr("class")
+                        ?.split(/\s+/);
+                    const textClassHeader = classListHeader?.find((cls) => cls.startsWith("hero"));
+            
+                    /*If FEATURE block*/
+                    if (textClassSection) {
+                        findRowsWidthImageAndReverse(textClassSection);
+                    }
+                
+                    /*If HERO block*/
+                    if (textClassHeader) {
+                        findRowsWidthImageAndReverse(textClassHeader);
+                    }
+                }
+            
+                function findRowsWidthImageAndReverse(textClass) {
+                    const rowsWithImages = $("." + textClass + " .row.align-items-center").has("img").toArray();
+                    const rowsWithLeftSideImages = rowsWithImages.filter((row) => {
+                        return( $(row).children().first().children().first().prop("tagName") === "IMG" );
+                    });
+                
+                    rowsWithLeftSideImages.forEach((row) => {
+                        if ($(window).width() <= 768) {
+                            row.classList.add("flex-column-reverse");
+                        }
+                    });
+                }
+                
+                if ($(window).width() <= 768) {
+                    changeImageDirectionsOnMobile();
+                }
+            });
+            
+            /** BG Size on mobile **/
+            document.addEventListener("DOMContentLoaded", function () {
+                if ($(window).width() <= 768) {
+                    var element = $("section.sw-background-size-auto, header.sw-background-size-auto");
+                    element.removeClass("sw-background-size-auto");
+                    element.css("background-size", "cover");
+                
+                    $("section.sw-background-attachment-fixed, header.sw-background-attachment-fixed").removeClass("sw-background-attachment-fixed");
+                }
+            });
+            
+            /** Disable zoom on mobile **/
+            document.addEventListener("DOMContentLoaded", function () {
+                if ($(window).width() <= 768) {
+                    $("input.sw-font-size-s").removeClass("sw-font-size-s");
+                    $("textarea.sw-font-size-s").removeClass("sw-font-size-s");
+                    $("select.sw-font-size-s").removeClass("sw-font-size-s");
+                }
+            });
+        </script>
+        <link type="text/css" rel="Stylesheet" href="https://unpkg.com/simplebar@5.3.6/dist/simplebar.css"/>
+        <script type="text/javascript"src="https://unpkg.com/simplebar@5.3.6/dist/simplebar.min.js"></script>
+    </head>
+    <body data-new-gr-c-s-loaded="9.24.0">
+        <!-- Scripts -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/micromodal/0.4.10/micromodal.min.js"></script>
+        <script>
+            /** Bugfix on multiple ?recordId= issue **/
+            setInterval(function () {
+                $("section a").each(function () {
+                    const href = $(this).attr("href");
+                    if (href && href.includes("?recordId=")) {
+                        const countOfRecords = (href.match(/\?recordId=/g) || []).length;
+                        if (countOfRecords > 1) {
+                            const index = href.lastIndexOf("?recordId=");
+                            const cleanedHref = href.substring(0, index);
+                            $(this).attr("href", cleanedHref);
+                        }
+                    }
+                });
+            }, 1000);
+        </script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/iframe-resizer/4.2.11/iframeResizer.contentWindow.js" crossorigin="anonymous"></script>
+        <script>
+            /** this function is called from list blocks (do not delete) **/
+            function openSwModal(url, size) {
+                MicroModal.init({
+                    disableScroll: true,
+                    awaitOpenAnimation: true,
+                    awaitCloseAnimation: true,
+                });
+            
+                MicroModal.show("sw-modal");
+                
+                const modalElem = document.querySelector("#sw-modal-content");
+                let loadingElem = modalElem.querySelector(".sw-modal-loading");
+                
+                if (!loadingElem) {
+                    modalElem.innerHTML += `<i class="sw-modal-loading fas fa-sync"></i>`;
+                    loadingElem = modalElem.querySelector(".sw-modal-loading");
+                    loadingElem.style.animation = "rotation 900ms infinite linear";
+                    loadingElem.style.position = "absolute";
+                }
+                
+                const iframeElem = document.querySelector(".sw-modal-iframe");
+                const modalContainer = document.querySelector(".sw-modal-container");
+                
+                iframeElem.onload = function () {
+                    loadingElem?.remove();
+                };
+            
+                const viewModeParam = "viewMode=modal";
+                const modalUrl = url.indexOf("?") !== -1 ? url + "&" + viewModeParam : url + "?" + viewModeParam;
+                iframeElem.setAttribute("src", modalUrl);
+            
+                modalContainer.classList.remove(
+                    "sw-modal-size-sm",
+                    "sw-modal-size-md",
+                    "sw-modal-size-lg",
+                    "sw-modal-size-xl"
+                );
+                modalContainer.classList.add("sw-modal-size-" + size);
             }
-          });
-        }
-
-        if ($(window).width() <= 768) {
-          changeImageDirectionsOnMobile();
-        }
-      });
-
-      /** BG Size on mobile **/
-      document.addEventListener("DOMContentLoaded", function () {
-        if ($(window).width() <= 768) {
-          var element = $(
-            "section.sw-background-size-auto, header.sw-background-size-auto"
-          );
-          element.removeClass("sw-background-size-auto");
-          element.css("background-size", "cover");
-
-          $(
-            "section.sw-background-attachment-fixed, header.sw-background-attachment-fixed"
-          ).removeClass("sw-background-attachment-fixed");
-        }
-      });
-
-      /** Disable zoom on mobile **/
-      document.addEventListener("DOMContentLoaded", function () {
-        if ($(window).width() <= 768) {
-          $("input.sw-font-size-s").removeClass("sw-font-size-s");
-          $("textarea.sw-font-size-s").removeClass("sw-font-size-s");
-          $("select.sw-font-size-s").removeClass("sw-font-size-s");
-        }
-      });
-    </script>
-    <link
-      type="text/css"
-      rel="Stylesheet"
-      href="https://unpkg.com/simplebar@5.3.6/dist/simplebar.css"
-    />
-    <script
-      type="text/javascript"
-      src="https://unpkg.com/simplebar@5.3.6/dist/simplebar.min.js"
-    ></script>
-  </head>
-
-  <body data-new-gr-c-s-loaded="9.24.0">
-    <!-- Scripts -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/micromodal/0.4.10/micromodal.min.js"></script>
-
-    <script>
-      /** Bugfix on multiple ?recordId= issue **/
-      setInterval(function () {
-        $("section a").each(function () {
-          const href = $(this).attr("href");
-          if (href && href.includes("?recordId=")) {
-            const countOfRecords = (href.match(/\?recordId=/g) || []).length;
-            if (countOfRecords > 1) {
-              const index = href.lastIndexOf("?recordId=");
-              const cleanedHref = href.substring(0, index);
-              $(this).attr("href", cleanedHref);
+        </script>
+        <!-- Localhost -->
+        <script type="text/javascript">
+            if (window.location.hostname === "localhost") {
+                if (getUrlParam("domain")) {
+                    setCookie("serverName", getUrlParam("domain"), 30);
+                }
             }
-          }
-        });
-      }, 1000);
-    </script>
-
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/iframe-resizer/4.2.11/iframeResizer.contentWindow.js"
-      crossorigin="anonymous"
-    ></script>
-
-    <script>
-      /** this function is called from list blocks (do not delete) **/
-      function openSwModal(url, size) {
-        MicroModal.init({
-          disableScroll: true,
-          awaitOpenAnimation: true,
-          awaitCloseAnimation: true,
-        });
-
-        MicroModal.show("sw-modal");
-
-        const modalElem = document.querySelector("#sw-modal-content");
-        let loadingElem = modalElem.querySelector(".sw-modal-loading");
-
-        if (!loadingElem) {
-          modalElem.innerHTML += `<i class="sw-modal-loading fas fa-sync"></i>`;
-          loadingElem = modalElem.querySelector(".sw-modal-loading");
-          loadingElem.style.animation = "rotation 900ms infinite linear";
-          loadingElem.style.position = "absolute";
-        }
-
-        const iframeElem = document.querySelector(".sw-modal-iframe");
-        const modalContainer = document.querySelector(".sw-modal-container");
-
-        iframeElem.onload = function () {
-          loadingElem?.remove();
-        };
-
-        const viewModeParam = "viewMode=modal";
-        const modalUrl =
-          url.indexOf("?") !== -1
-            ? url + "&" + viewModeParam
-            : url + "?" + viewModeParam;
-        iframeElem.setAttribute("src", modalUrl);
-
-        modalContainer.classList.remove(
-          "sw-modal-size-sm",
-          "sw-modal-size-md",
-          "sw-modal-size-lg",
-          "sw-modal-size-xl"
-        );
-        modalContainer.classList.add("sw-modal-size-" + size);
-      }
-    </script>
-
-    <!-- Localhost -->
-    <script type="text/javascript">
-      if (window.location.hostname === "localhost") {
-        if (getUrlParam("domain")) {
-          setCookie("serverName", getUrlParam("domain"), 30);
-        }
-      }
-      function setCookie(name, value, days) {
-        var date = new Date();
-        date.setTime(date.getTime() + days * 24 * 60 * 60 * 1000);
-        var expires = "expires=" + date.toUTCString();
-        document.cookie =
-          name +
-          "=" +
-          value +
-          ";" +
-          expires +
-          ";path=/;" +
-          "SameSite=None; Secure";
-      }
-      function getUrlParam(name) {
-        const url = new URL(window.location.href);
-        let param;
-        for (var key of url.searchParams.keys()) {
-          if (key.toLowerCase() === name.toLowerCase()) {
-            param = url.searchParams.get(name);
-            break;
-          }
-        }
-        return param;
-      }
-    </script>
-
-    <!-- Modal HTML -->
-    <div id="sw-modal" class="sw-modal" aria-hidden="true">
-      <div class="sw-modal-overlay">
-        <div tabindex="-1" class="sw-modal-container">
-          <div
-            role="dialog"
-            aria-modal="true"
-            aria-labelledby="micromodal-title"
-          >
-            <button
-              aria-label="Close modal"
-              class="sw-modal-close"
-              onclick="MicroModal.close('sw-modal')"
-            ></button>
-            <div id="sw-modal-content">
-              <iframe class="sw-modal-iframe"></iframe>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!--Scroll to section-->
-    <script>
-      document.addEventListener("DOMContentLoaded", function () {
-        $("a").each(function (index, el) {
-          let href = $(el).attr("href");
-          let path = cleanSlugFromPath(location.pathname);
-          if (href && href.startsWith(path + "#")) {
-            const scrollTo = href.split("#")[1];
-            $(this).attr("href", "#" + scrollTo);
-          }
-        });
-
-        function cleanSlugFromPath(pagePath) {
-          if (pagePath.includes("/r/rec")) {
-            pagePath = pagePath.substring(0, pagePath.indexOf("/r/rec"));
-            pagePath = pagePath.substring(
-              0,
-              pagePath.lastIndexOf("index.html")
-            );
-          }
-
-          return pagePath + (pagePath.endsWith("/") ? "" : "/");
-        }
-      });
-    </script>
-
-    <script
-      src="https://code.jquery.com/jquery-3.3.1.js"
-      integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
-      crossorigin="anonymous"
-    ></script>
-    <script>
-      $(function () {
-        console.log("hello");
-        $("#header").load("header.html");
-        $("#footer").load("footer.html");
-      });
-    </script>
-
-    <div
-      data-appid="8b8577c9-0a43-4f84-8d97-e9e6db87f72a"
-      data-pageid="3a6a0412-3894-4336-b1b4-7f75b068ce2a"
-      class="content"
-    >
-      <div id="header"></div>
-      <header
-        id="hero1"
-        data-block-version="2.0.1"
-        data-block-id="d943437f-a753-4401-a2fe-2469f41ae610"
-        data-block-updated="Tue Sep 06 2022 00:21:51 GMT+0400 (Armenia Standard Time)"
-        class="hero1-d943437f-a753-4401-a2fe-2469f41ae610 sw-background-color-eda100 sw-padding-top-2xl sw-padding-bottom-2xl sw-border-top-style-none sw-border-top-width-xs sw-border-top-color-2e4460 sw-border-bottom-style-none sw-border-bottom-width-xs sw-border-bottom-color-2e4460 sw-background-repeat-no-repeat sw-background-size-cover sw-background-position-center sw-background-attachment-scroll"
-      >
-        <div class="container">
-          <div class="row align-items-center">
-            <div class="col-lg-5 pb-5 pb-lg-0 text-center text-lg-left">
-              <h1
-                class="sw-font-size-8xl sw-text-color-ffffff sw-font-family-pacifico sw-font-weight-medium sw-padding-top-none sw-padding-bottom-s sw-letter-spacing-normal sw-line-height-compact"
-              >
-                Cube Notes
-              </h1>
-              <p
-                class="sw-font-size-l sw-text-color-ffffff sw-font-family-default sw-font-weight-default sw-padding-top-none sw-padding-bottom-7xs sw-letter-spacing-normal sw-line-height-loose"
-              >
-                The virtual reality note-taking app.<br />Curate your notes in
-                3D.
-              </p>
-              <div
-                class="d-flex justify-content-center justify-content-lg-start flex-wrap"
-              >
-                <a
-                  data-element="button"
-                  target=""
-                  class="sw-font-size-xs sw-text-color-default sw-font-family-default sw-font-weight-semibold sw-border-radius-l sw-background-color-default sw-padding-left-4xs sw-padding-right-4xs sw-padding-top-5xs sw-padding-bottom-5xs sw-border-style-solid sw-border-width-s sw-border-color-ffffff sw-letter-spacing-wider sw-text-decoration-no-underline hover:sw-text-decoration-no-underline hover:sw-box-shadow-m sw-margin-bottom-6xs sw-margin-right-5xs sw-display-inline-block"
-                  href="#feature1"
-                >
-                  Explore Features
-                </a>
-              </div>
-            </div>
-            <div class="col-lg-7 text-center">
-              <img
-                src="homeimage.png"
-                class="sw-percentage-width-full sw-border-style-solid sw-border-width-none sw-border-color-2e4460 sw-border-radius-none mx-auto d-block"
-                alt="Image alt"
-              />
-            </div>
-          </div>
-        </div>
-      </header>
-      <section
-        id="feature1"
-        data-block-version="2.0.1"
-        data-block-id="e6406a63-9b0f-426d-b05c-2439692dcb64"
-        data-block-updated="Tue Sep 06 2022 00:21:55 GMT+0400 (Armenia Standard Time)"
-        class="feature4-e6406a63-9b0f-426d-b05c-2439692dcb64 sw-background-color-ffffff sw-padding-top-2xl sw-padding-bottom-2xl sw-border-top-style-none sw-border-top-width-xs sw-border-top-color-2e4460 sw-border-bottom-style-none sw-border-bottom-width-xs sw-border-bottom-color-2e4460 sw-background-repeat-no-repeat sw-background-size-cover sw-background-position-center sw-background-attachment-scroll"
-      >
-        <div class="container">
-          <div class="col-12 text-center">
-            <h2
-              class="sw-font-size-4xl sw-text-color-default sw-font-family-default sw-font-weight-default sw-padding-top-none sw-padding-bottom-4xs sw-letter-spacing-normal sw-line-height-normal"
-            >
-              Explore Features
-            </h2>
-            <p
-              class="sw-font-size-xl sw-text-color-default sw-font-family-default sw-font-weight-default sw-padding-top-none sw-padding-bottom-m sw-letter-spacing-normal sw-line-height-loose"
-            >
-              We've catered unique features to build the perfect ecosystem for
-              students' needs in VR.
-            </p>
-          </div>
-          <div class="row align-items-center">
-            <div
-              class="col-md-9 col-md-offset-2 text-center text-lg-left pt-5 pt-lg-0"
-              style="margin-left: 12%; margin-right: 12%"
-            >
-              <div class="row" style="gap: 7px">
-                <div class="col-12">
-                  <div class="s-feature-box active">
-                    <h6
-                      class="sw-font-size-l sw-text-color-default sw-font-family-default sw-font-weight-medium sw-letter-spacing-normal sw-margin-bottom-6xs sw-margin-top-none"
-                    >
-                      3D Pen
-                    </h6>
-                    <p
-                      class="sw-font-size-m sw-text-color-default sw-font-family-default sw-font-weight-default sw-line-height-loose sw-letter-spacing-normal"
-                    >
-                      Draw, write, annotate, and more in 3D with the multicolor
-                      pen.
-                    </p>
-                  </div>
+            function setCookie(name, value, days) {
+                var date = new Date();
+                date.setTime(date.getTime() + days * 24 * 60 * 60 * 1000);
+                var expires = "expires=" + date.toUTCString();
+                document.cookie = name + "=" + value + ";" + expires + ";path=/;" + "SameSite=None; Secure";
+            }
+            function getUrlParam(name) {
+                const url = new URL(window.location.href);
+                let param;
+                for (var key of url.searchParams.keys()) {
+                    if (key.toLowerCase() === name.toLowerCase()) {
+                        param = url.searchParams.get(name);
+                        break;
+                    }
+                }
+                return param;
+            }
+        </script>
+        <!-- Modal HTML -->
+        <div id="sw-modal" class="sw-modal" aria-hidden="true">
+            <div class="sw-modal-overlay">
+                <div tabindex="-1" class="sw-modal-container">
+                    <div role="dialog" aria-modal="true" aria-labelledby="micromodal-title">
+                        <button aria-label="Close modal" class="sw-modal-close" onclick="MicroModal.close('sw-modal')"></button>
+                        <div id="sw-modal-content">
+                            <iframe class="sw-modal-iframe"></iframe>
+                        </div>
+                    </div>
                 </div>
-                <div class="col-12">
-                  <div class="s-feature-box active">
-                    <h6
-                      class="sw-font-size-l sw-text-color-default sw-font-family-default sw-font-weight-medium sw-letter-spacing-normal sw-margin-bottom-6xs sw-margin-top-none"
-                    >
-                      Sticky Notes
-                    </h6>
-                    <p
-                      class="sw-font-size-m sw-text-color-default sw-font-family-default sw-font-weight-default sw-line-height-loose sw-letter-spacing-normal"
-                    >
-                      Don't sacrifice legibility in 3D. Organize typed written
-                      notes on movable sticky notes.
-                    </p>
-                  </div>
-                </div>
-                <div class="col-12">
-                  <div class="s-feature-box active">
-                    <h6
-                      class="sw-font-size-l sw-text-color-default sw-font-family-default sw-font-weight-medium sw-letter-spacing-normal sw-margin-bottom-6xs sw-margin-top-none"
-                    >
-                      Premade 3D polygons
-                    </h6>
-                    <p
-                      class="sw-font-size-m sw-text-color-default sw-font-family-default sw-font-weight-default sw-line-height-loose sw-letter-spacing-normal"
-                    >
-                      View, scale, and annotate 3D polygons to better understand
-                      their geometry.
-                    </p>
-                  </div>
-                </div>
-                <div class="col-12">
-                  <div class="s-feature-box active">
-                    <h6
-                      class="sw-font-size-l sw-text-color-default sw-font-family-default sw-font-weight-medium sw-letter-spacing-normal sw-margin-bottom-6xs sw-margin-top-none"
-                    >
-                      Built-in Video Viewer
-                    </h6>
-                    <p
-                      class="sw-font-size-m sw-text-color-default sw-font-family-default sw-font-weight-default sw-line-height-loose sw-letter-spacing-normal"
-                    >
-                      It's hard to take notes in VR if you need to take your
-                      headset off to watch a lecture, so we've brought the
-                      lecture to VR.
-                    </p>
-                  </div>
-                </div>
-              </div>
             </div>
-          </div>
         </div>
-      </section>
-      <!-- <section
-        id="cta1"
-        data-block-version="2.0.1"
-        data-block-id="03e128be-4859-49f1-a201-aef7f39f2482"
-        data-block-updated="Tue Sep 06 2022 00:21:59 GMT+0400 (Armenia Standard Time)"
-        class="cta3-03e128be-4859-49f1-a201-aef7f39f2482 sw-background-color-eda100 sw-padding-top-2xl sw-padding-bottom-2xl sw-border-top-style-none sw-border-top-width-xs sw-border-top-color-2e4460 sw-border-bottom-style-none sw-border-bottom-width-xs sw-border-bottom-color-2e4460 sw-background-repeat-no-repeat sw-background-size-cover sw-background-position-center sw-background-attachment-scroll"
-      >
-        <div class="container">
-          <div class="row align-items-center">
-            <div
-              class="col-12 text-center sw-background-color-none sw-border-style-none sw-border-width-xs sw-border-color-2e4460 sw-border-radius-none sw-box-shadow-none sw-padding-top-none sw-padding-bottom-none"
-            >
-              <h2
-                class="sw-font-size-4xl sw-text-color-ffffff sw-font-family-default sw-font-weight-medium sw-padding-top-none sw-padding-bottom-6xs sw-letter-spacing-normal sw-line-height-normal"
-              >
-                Stay Updated
-              </h2>
-              <p
-                class="sw-font-size-m sw-text-color-ffffff sw-font-family-default sw-font-weight-normal sw-padding-top-none sw-padding-bottom-xs sw-letter-spacing-normal sw-line-height-loose"
-              >
-                Follow us as we journey through the development process.
-              </p>
-              <div
-                class="fields-parent-container d-flex justify-content-center flex-wrap mx-sm-3"
-              >
-                <input
-                  id="sw-email-capture-email-input"
-                  type="text"
-                  class="sw-background-color-ffffff sw-font-size-s sw-text-color-2e4460 sw-font-family-default sw-border-radius-l sw-width-2xs sw-padding-top-none sw-padding-bottom-none sw-border-style-none sw-border-width-xs sw-border-color-2e4460 sw-box-shadow-none sw-margin-bottom-6xs sw-margin-left-5xs sw-display-inline-block sw-padding-left-5xs sw-outline-none"
-                  placeholder="Email"
-                />
-                <a
-                  data-element="button"
-                  id="sw-email-capture-submit-btn"
-                  class="sw-font-size-xs sw-text-color-default sw-font-family-default sw-font-weight-semibold sw-border-radius-default sw-background-color-eda100 sw-padding-left-3xs sw-padding-right-3xs sw-padding-top-4xs sw-padding-bottom-4xs sw-border-style-solid sw-border-width-s sw-border-color-ffffff sw-letter-spacing-normal sw-text-decoration-no-underline hover:sw-text-decoration-no-underline hover:sw-box-shadow-m sw-margin-bottom-6xs sw-margin-left-5xs sw-display-inline-block"
-                  href="javascript:void(0);"
-                >
-                  SUBSCRIBE
-                  <div
-                    class="spinner-border sw-btn-spinner d-none text-light"
-                    role="status"
-                  >
-                    <span class="sr-only">Loading...</span>
-                  </div>
-                  <i class="fa fa-fw fa-check d-none" aria-hidden="true"></i>
-                </a>
-                <p
-                  id="sw-form-success-message"
-                  data-success-action-state="SHOW_MESSAGE"
-                  data-success-action-path="NO_ACTION"
-                  class="col-12 text-center d-none sw-font-size-l sw-text-color-ffffff sw-font-family-default sw-font-weight-default sw-padding-top-none sw-padding-bottom-none sw-letter-spacing-wider"
-                >
-                  Thank you!
-                </p>
-              </div>
-            </div>
-          </div>
+        <!--Scroll to section-->
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+                $("a").each(function (index, el) {
+                    let href = $(el).attr("href");
+                    let path = cleanSlugFromPath(location.pathname);
+                    if (href && href.startsWith(path + "#")) {
+                        const scrollTo = href.split("#")[1];
+                        $(this).attr("href", "#" + scrollTo);
+                    }
+                });
+            
+                function cleanSlugFromPath(pagePath) {
+                    if (pagePath.includes("/r/rec")) {
+                        pagePath = pagePath.substring(0, pagePath.indexOf("/r/rec"));
+                        pagePath = pagePath.substring(0,pagePath.lastIndexOf("index.html"));
+                    }
+                
+                    return pagePath + (pagePath.endsWith("/") ? "" : "/");
+                }
+            });
+        </script>
+        <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+        <script>
+            $(function () {
+                console.log("hello");
+                $("#header").load("header.html");
+                $("#footer").load("footer.html");
+            });
+        </script>
+        <div data-appid="8b8577c9-0a43-4f84-8d97-e9e6db87f72a" data-pageid="3a6a0412-3894-4336-b1b4-7f75b068ce2a" class="content">
+            <div id="header"></div>
+            <header id="hero1" data-block-version="2.0.1" data-block-id="d943437f-a753-4401-a2fe-2469f41ae610" data-block-updated="Tue Sep 06 2022 00:21:51 GMT+0400 (Armenia Standard Time)" class="hero1-d943437f-a753-4401-a2fe-2469f41ae610 sw-background-color-eda100 sw-padding-top-2xl sw-padding-bottom-2xl sw-border-top-style-none sw-border-top-width-xs sw-border-top-color-2e4460 sw-border-bottom-style-none sw-border-bottom-width-xs sw-border-bottom-color-2e4460 sw-background-repeat-no-repeat sw-background-size-cover sw-background-position-center sw-background-attachment-scroll">
+                <div class="container">
+                    <div class="row align-items-center">
+                        <div class="col-lg-5 pb-5 pb-lg-0 text-center text-lg-left">
+                            <h1 class="sw-font-size-8xl sw-text-color-ffffff sw-font-family-pacifico sw-font-weight-medium sw-padding-top-none sw-padding-bottom-s sw-letter-spacing-normal sw-line-height-compact">
+                                Cube Notes
+                            </h1>
+                            <p class="sw-font-size-l sw-text-color-ffffff sw-font-family-default sw-font-weight-default sw-padding-top-none sw-padding-bottom-7xs sw-letter-spacing-normal sw-line-height-loose">
+                                The virtual reality note-taking app.<br />Curate your notes in 3D.
+                            </p>
+                            <div class="d-flex justify-content-center justify-content-lg-start flex-wrap">
+                                <a data-element="button" target="" class="sw-font-size-xs sw-text-color-default sw-font-family-default sw-font-weight-semibold sw-border-radius-l sw-background-color-default sw-padding-left-4xs sw-padding-right-4xs sw-padding-top-5xs sw-padding-bottom-5xs sw-border-style-solid sw-border-width-s sw-border-color-ffffff sw-letter-spacing-wider sw-text-decoration-no-underline hover:sw-text-decoration-no-underline hover:sw-box-shadow-m sw-margin-bottom-6xs sw-margin-right-5xs sw-display-inline-block" href="#feature1">
+                                Explore Features
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-lg-7 text-center">
+                            <img src="homeimage.png" class="sw-percentage-width-full sw-border-style-solid sw-border-width-none sw-border-color-2e4460 sw-border-radius-none mx-auto d-block" alt="Image alt"/>
+                        </div>
+                    </div>
+                </div>
+            </header>
+            <section id="feature1" data-block-version="2.0.1" data-block-id="e6406a63-9b0f-426d-b05c-2439692dcb64" data-block-updated="Tue Sep 06 2022 00:21:55 GMT+0400 (Armenia Standard Time)" class="feature4-e6406a63-9b0f-426d-b05c-2439692dcb64 sw-background-color-ffffff sw-padding-top-2xl sw-padding-bottom-2xl sw-border-top-style-none sw-border-top-width-xs sw-border-top-color-2e4460 sw-border-bottom-style-none sw-border-bottom-width-xs sw-border-bottom-color-2e4460 sw-background-repeat-no-repeat sw-background-size-cover sw-background-position-center sw-background-attachment-scroll">
+                <div class="container">
+                    <div class="col-12 text-center">
+                        <h2 class="sw-font-size-4xl sw-text-color-default sw-font-family-default sw-font-weight-default sw-padding-top-none sw-padding-bottom-4xs sw-letter-spacing-normal sw-line-height-normal">
+                            Explore Features
+                        </h2>
+                        <p class="sw-font-size-xl sw-text-color-default sw-font-family-default sw-font-weight-default sw-padding-top-none sw-padding-bottom-m sw-letter-spacing-normal sw-line-height-loose">
+                            We've catered unique features to build the perfect ecosystem for students' needs in VR.
+                        </p>
+                    </div>
+                    <div class="row align-items-center">
+                        <div class="col-md-9 col-md-offset-2 text-center text-lg-left pt-5 pt-lg-0" style="margin-left: 12%; margin-right: 12%">
+                            <div class="row" style="gap: 7px">
+                                <div class="col-12">
+                                    <div class="s-feature-box active">
+                                        <h6 class="sw-font-size-l sw-text-color-default sw-font-family-default sw-font-weight-medium sw-letter-spacing-normal sw-margin-bottom-6xs sw-margin-top-none">
+                                            3D Pen
+                                        </h6>
+                                        <p class="sw-font-size-m sw-text-color-default sw-font-family-default sw-font-weight-default sw-line-height-loose sw-letter-spacing-normal">
+                                            Draw, write, annotate, and more in 3D with the multicolor pen.
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="s-feature-box active">
+                                        <h6 class="sw-font-size-l sw-text-color-default sw-font-family-default sw-font-weight-medium sw-letter-spacing-normal sw-margin-bottom-6xs sw-margin-top-none">
+                                            Sticky Notes
+                                        </h6>
+                                        <p class="sw-font-size-m sw-text-color-default sw-font-family-default sw-font-weight-default sw-line-height-loose sw-letter-spacing-normal">
+                                            Don't sacrifice legibility in 3D. Organize typed written notes on movable sticky notes.
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="s-feature-box active">
+                                        <h6 class="sw-font-size-l sw-text-color-default sw-font-family-default sw-font-weight-medium sw-letter-spacing-normal sw-margin-bottom-6xs sw-margin-top-none">
+                                            Premade 3D polygons
+                                        </h6>
+                                        <p class="sw-font-size-m sw-text-color-default sw-font-family-default sw-font-weight-default sw-line-height-loose sw-letter-spacing-normal">
+                                            View, scale, and annotate 3D polygons to better understand their geometry.
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="s-feature-box active">
+                                        <h6 class="sw-font-size-l sw-text-color-default sw-font-family-default sw-font-weight-medium sw-letter-spacing-normal sw-margin-bottom-6xs sw-margin-top-none">
+                                            Built-in Video Viewer
+                                        </h6>
+                                        <p class="sw-font-size-m sw-text-color-default sw-font-family-default sw-font-weight-default sw-line-height-loose sw-letter-spacing-normal">
+                                            It's hard to take notes in VR if you need to take your headset off to watch a lecture, so we've brought the lecture to VR.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <div id="footer"></div>
         </div>
-      </section> -->
-      <div id="footer"></div>
-    </div>
-  </body>
+    </body>
 </html>
+<!-- Mobile Menu Toggle -->
+<script src="https://v2.vuejs.org/js/vue.js"></script>
+<script>
+    var V = new Vue({
+        el: '#home_header3',
+        data: {
+            shown: false
+        },
+        methods: {
+            toggle: function () {
+                console.log(this.shown);
+                if (this.shown) {
+                    $('mob-menu-content').removeClass('show');
+                } else {
+                    $('mob-menu-content').addClass('show');
+                }
+                this.shown = !this.shown;
+            }
+        }
+    })
+</script>
